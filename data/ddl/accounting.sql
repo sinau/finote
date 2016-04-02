@@ -30,9 +30,9 @@ CREATE TABLE IF NOT EXISTS `invoice` (
   `no_faktur` varchar(32) DEFAULT NULL,
   `tgl_faktur` date DEFAULT NULL,
   `last_user` varchar(36) DEFAULT NULL,
-  `dari_kepada` varchar(34) DEFAULT NULL,
-  `last_update` varchar(35) DEFAULT NULL, --- ini seharusnya date
-  `keterangan` varchar(52) DEFAULT NULL --- keterangannya sepertinya kurang panjang
+  `dari_kepada` varchar(36) DEFAULT NULL,
+  `last_update` date DEFAULT NULL,
+  `keterangan` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
