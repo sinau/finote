@@ -1,0 +1,3 @@
+1. sistem akan menampilkan pilihan nomor akun. 
+2. user akan memilih penerimaaan atau pengeluaran dari faktur / invoice
+3. sistem akan menerima inputan invoice dari user
