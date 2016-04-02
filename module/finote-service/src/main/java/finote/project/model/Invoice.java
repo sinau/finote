@@ -2,7 +2,9 @@ package finote.project.model;
 
 public class Invoice {
 	private String nomorFaktur;
-	private String TanggalFaktur;
+	private String tanggalFaktur;
+	private String lastUser;
+	private String dariKepada;
 	private String lastUpdate;
 	private String keterangan;
 
@@ -15,11 +17,27 @@ public class Invoice {
 	}
 
 	public String getTanggalFaktur() {
-		return TanggalFaktur;
+		return tanggalFaktur;
 	}
 
 	public void setTanggalFaktur(String tanggalFaktur) {
-		TanggalFaktur = tanggalFaktur;
+		this.tanggalFaktur = tanggalFaktur;
+	}
+
+	public String getLastUser() {
+		return lastUser;
+	}
+
+	public void setLastUser(String lastUser) {
+		this.lastUser = lastUser;
+	}
+
+	public String getDariKepada() {
+		return dariKepada;
+	}
+
+	public void setDariKepada(String dariKepada) {
+		this.dariKepada = dariKepada;
 	}
 
 	public String getLastUpdate() {

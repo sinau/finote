@@ -18,11 +18,11 @@ public class InvoiceDaoImpl implements InvoiceDao {
 	private PreparedStatement getByIdStatement;
 	private PreparedStatement getAllStatement;
 
-	private final String INSERT_QUERY = "insert into Invoice(No_Faktur,Tangal_Faktur,Last_Update,Keterangan)values(?,?,?,?)";
-	private final String UPDATE_QUERY = " Update Invoice set Tanggal_Faktur=?, Last_Update=?,Keterangan=? where No_Faktur=?";
-	private final String DELETE_QUERY = " delete From Invoice where NO_Faktur=?";
-	private final String GET_BY_ID_QUERY = "select Nomor_Faktur,Tanggal_Faktur,Last_Update,Keterangan from Invoice where No_Faktur=?";
-	private final String GET_ALL_QUERY = " select Nomor_Faktur, Tanggal_Faktur,Last_Update, Keterangan from Invoice";
+	private final String INSERT_QUERY = "insert into invoice(no_faktur,tgl_faktur,last_user,dari_kepada,last_update,keterangan)values(?,?,?,?,?,?)";
+	private final String UPDATE_QUERY = " Update invoice set tgl_faktur=?,last_user=?,dari_kepada=?,last_update=?,keterangan=? where no_faktur=?";
+	private final String DELETE_QUERY = " delete From invoice where no_faktur=?";
+	private final String GET_BY_ID_QUERY = "select no_faktur,tgl_faktur,last_user,dari_kepada,last_update,keterangan from Invoice where No_Faktur=?";
+	private final String GET_ALL_QUERY = " select no_faktur,tgl_faktur,last_user,dari_kepada,last_update,keterangan from Invoice";
 
 	public void Connection(Connection connection) throws SQLException {
 		this.connection = connection;
