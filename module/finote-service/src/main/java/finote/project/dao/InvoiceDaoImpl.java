@@ -38,13 +38,19 @@ public class InvoiceDaoImpl implements InvoiceDao {
 		if (!isUpdate) {
 			insertStatement.setString(1, invoice.getNomorFaktur());
 			insertStatement.setString(2, invoice.getTanggalFaktur());
-			insertStatement.setString(3, invoice.getLastUpdate());
-			insertStatement.setString(4, invoice.getKeterangan());
+			insertStatement.setString(3, invoice.getLastUser());
+			insertStatement.setString(4, invoice.getDariKepada());
+			insertStatement.setString(5, invoice.getLastUpdate());
+			insertStatement.setString(6, invoice.getKeterangan());
+			insertStatement.executeUpdate();
 		} else {
-			updateStatement.setString(1, invoice.getTanggalFaktur());
-			updateStatement.setString(2, invoice.getLastUpdate());
-			updateStatement.setString(3, invoice.getKeterangan());
-			updateStatement.setString(4, invoice.getNomorFaktur());
+			updateStatement.setString(1, invoice.getNomorFaktur());
+			updateStatement.setString(2, invoice.getTanggalFaktur());
+			updateStatement.setString(3, invoice.getLastUser());
+			updateStatement.setString(4, invoice.getDariKepada());
+			updateStatement.setString(5, invoice.getLastUpdate());
+			updateStatement.setString(6, invoice.getKeterangan());
+			updateStatement.executeUpdate();
 		}
 		return invoice;
 	}
@@ -62,10 +68,12 @@ public class InvoiceDaoImpl implements InvoiceDao {
 		ResultSet rs = getByIdStatement.executeQuery();
 		if (rs.next()) {
 			Invoice invoice = new Invoice();
-			invoice.setNomorFaktur(rs.getString("Nomor_Faktur"));
-			invoice.setTanggalFaktur(rs.getString("Tanggal_Faktur"));
-			invoice.setLastUpdate(rs.getString("Last_Update"));
-			invoice.setTanggalFaktur(rs.getString("Keterangan"));
+			invoice.setNomorFaktur(rs.getString("no_faktur"));
+			invoice.setTanggalFaktur(rs.getString("tgl_faktur"));
+			invoice.setLastUser(rs.getString("last_user"));
+			invoice.setDariKepada(rs.getString("dari_kepada"));
+			invoice.setLastUpdate(rs.getString("last_user"));
+			invoice.setKeterangan(rs.getString("keterangan"));
 			return invoice;
 		}
 		return null;
@@ -77,10 +85,12 @@ public class InvoiceDaoImpl implements InvoiceDao {
 		ResultSet rs = getAllStatement.executeQuery();
 		while (rs.next()) {
 			Invoice i = new Invoice();
-			i.setNomorFaktur(rs.getString("Nomor_Faktur"));
-			i.setTanggalFaktur(rs.getString("Tanggal_Faktur"));
-			i.setLastUpdate(rs.getString("Last_Update"));
-			i.setTanggalFaktur(rs.getString("Keterangan"));
+			i.setNomorFaktur(rs.getString("no_faktur"));
+			i.setTanggalFaktur(rs.getString("tgl_faktur"));
+			i.setLastUser(rs.getString("last_user"));
+			i.setDariKepada(rs.getString("dari_kepada"));
+			i.setLastUpdate(rs.getString("last_user"));
+			i.setKeterangan(rs.getString("keterangan"));
 			invoice.add(i);
 		}
 		return invoice;

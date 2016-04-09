@@ -3,9 +3,8 @@ package finote.project.model;
 public class InvoiceItem {
 	private String idAcount;
 	private String idInvoice;
-	private String nama;
+	private String namaPerkiraan;
 	private String cc;
-	private String idInvoiceItem;
 	private String uraian;
 	private String debit;
 	private String kredit;
@@ -26,12 +25,12 @@ public class InvoiceItem {
 		this.idInvoice = idInvoice;
 	}
 
-	public String getNama() {
-		return nama;
+	public String getNamaPerkiraan() {
+		return namaPerkiraan;
 	}
 
-	public void setNama(String nama) {
-		this.nama = nama;
+	public void setNamaPerkiraan(String namaPerkiraan) {
+		this.namaPerkiraan = namaPerkiraan;
 	}
 
 	public String getCc() {
@@ -40,14 +39,6 @@ public class InvoiceItem {
 
 	public void setCc(String cc) {
 		this.cc = cc;
-	}
-
-	public String getIdInvoiceItem() {
-		return idInvoiceItem;
-	}
-
-	public void setIdInvoiceItem(String idInvoiceItem) {
-		this.idInvoiceItem = idInvoiceItem;
 	}
 
 	public String getUraian() {
@@ -73,5 +64,4 @@ public class InvoiceItem {
 	public void setKredit(String kredit) {
 		this.kredit = kredit;
 	}
-
 }
