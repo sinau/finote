@@ -9,16 +9,16 @@
       <Label layoutX="36.0" layoutY="28.0" text="No Faktur" />
       <TextField fx:id="txtNoFaktur" layoutX="141.0" layoutY="24.0" prefHeight="25.0" prefWidth="381.0" />
       <Label layoutX="36.0" layoutY="65.0" text="Tgl Faktur" />
-      <TextField layoutX="141.0" layoutY="61.0" prefHeight="25.0" prefWidth="381.0" />
+      <TextField fx:id="txtTglFaktur" layoutX="141.0" layoutY="61.0" prefHeight="25.0" prefWidth="381.0" />
       <Label layoutX="38.0" layoutY="105.0" text="Last User" />
       <Label layoutX="37.0" layoutY="192.0" text="Last Update" />
       <Label layoutX="37.0" layoutY="145.0" text="Dari Kepada" />
       <Label layoutX="39.0" layoutY="230.0" text="Keterangan" />
-      <TextField layoutX="141.0" layoutY="184.0" prefHeight="25.0" prefWidth="381.0" />
+      <TextField fx:id="txtLastUpdate" layoutX="141.0" layoutY="184.0" prefHeight="25.0" prefWidth="381.0" />
       <Button layoutX="141.0" layoutY="265.0" mnemonicParsing="false" text="Add Invoice" />
-      <TextField layoutX="141.0" layoutY="141.0" prefHeight="25.0" prefWidth="381.0" />
-      <TextField layoutX="141.0" layoutY="226.0" prefHeight="25.0" prefWidth="381.0" />
-      <TextField layoutX="141.0" layoutY="101.0" prefHeight="25.0" prefWidth="381.0" />
+      <TextField fx:id="txtDariKepada" layoutX="141.0" layoutY="141.0" prefHeight="25.0" prefWidth="381.0" />
+      <TextField fx:id="txtKeterangan" layoutX="141.0" layoutY="226.0" prefHeight="25.0" prefWidth="381.0" />
+      <TextField fx:id="txtLastUser" layoutX="141.0" layoutY="101.0" prefHeight="25.0" prefWidth="381.0" />
       <TableView layoutX="30.0" layoutY="306.0" prefHeight="200.0" prefWidth="559.0">
         <columns>
           <TableColumn prefWidth="93.0" text="No Account" />
