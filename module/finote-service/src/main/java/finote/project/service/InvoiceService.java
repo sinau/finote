@@ -42,36 +42,39 @@ public class InvoiceService {
 		return invoice;
 
 	}
-	public Invoice Delete(Invoice invoice)throws SQLException{
-		try{
+
+	public Invoice Delete(Invoice invoice) throws SQLException {
+		try {
 			connection.setAutoCommit(false);
 			invoiceDao.delete(invoice);
 			connection.commit();
 			connection.setAutoCommit(true);
-		}catch(SQLException ex){
-			try{
+		} catch (SQLException ex) {
+			try {
 				connection.rollback();
-			}catch(SQLException e){
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
 		return invoice;
 	}
-	public Invoice getPerson(String nomorFaktur)throws SQLException{
-		Invoice invoice=null;
-		try{
-			invoice= invoiceDao.getById(nomorFaktur);
-		}catch(SQLException e){
+
+	public Invoice getPerson(String nomorFaktur) throws SQLException {
+		Invoice invoice = null;
+		try {
+			invoice = invoiceDao.getById(nomorFaktur);
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return invoice;
 	}
-public List<Invoice> getPerson(){
-	try{
-		return invoiceDao.getAll();
-	}catch(SQLException e){
-		e.printStackTrace();
-	}
+
+	public List<Invoice> getPerson() {
+		try {
+			return invoiceDao.getAll();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return new ArrayList<Invoice>();
-}
+	}
 }
