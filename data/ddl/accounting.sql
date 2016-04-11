@@ -57,12 +57,21 @@ CREATE TABLE IF NOT EXISTS `invoice_item` (
 -- Struktur dari tabel `nomor_account`
 --
 
-CREATE TABLE IF NOT EXISTS `nomor_account` (
-  `id` int(11) DEFAULT NULL, --- kalau bisa kasih gunakan varchar
-  `nama` varchar(30) DEFAULT NULL,
-  `cc` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+create table ACCOUNT_CLASS(
+	code varchar(3) not null primary key,
+    name varchar(32) not null
+);
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+create table ACCOUNT_SUBCLASS(
+	code varchar(3) not null primary key,
+    parent_code varchar(3) not null,
+    name varchar(32) not null,
+    foreign key(parent_code) references ACCOUNT_CLASS(code)
+);
+
+CREATE TABLE ACCOUNT_CODE(
+	code varchar(5) not null primary key,
+    parent_code varchar(3) not null,
+    name varchar(64) not null,
+    foreign key(parent_code) references ACCOUNT_SUBCLASS(code)
+);
