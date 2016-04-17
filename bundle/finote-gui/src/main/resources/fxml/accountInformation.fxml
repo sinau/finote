@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox layoutX="410.0" layoutY="41.0" mnemonicParsing="false" text="Invoice Account" />
+      <RadioButton layoutX="34.0" layoutY="41.0" mnemonicParsing="false" text="Header Account" />
+      <RadioButton layoutX="34.0" layoutY="69.0" mnemonicParsing="false" text="Detail Account" />
+      <RadioButton layoutX="34.0" layoutY="97.0" mnemonicParsing="false" text="Detail Cheque Account" />
+      <Label layoutX="68.0" layoutY="133.0" text="Account Classication" />
+      <Label layoutX="87.0" layoutY="161.0" text="Account Number" />
+      <Label layoutX="99.0" layoutY="191.0" text="Account Name" />
+      <Label layoutX="93.0" layoutY="250.0" text="Current Balance" />
+      <Label layoutX="87.0" layoutY="220.0" text="Opening Balance" />
+      <Label layoutX="123.0" layoutY="279.0" text="Text Kode" />
+      <Label layoutX="206.0" layoutY="161.0" prefHeight="17.0" prefWidth="16.0" text="\$" />
+      <Button layoutX="293.0" layoutY="362.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="53.0" />
+      <Button layoutX="443.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Oke" />
+      <Button layoutX="228.0" layoutY="362.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="?" />
+      <Button layoutX="352.0" layoutY="362.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="53.0" />
+      <TextField layoutX="229.0" layoutY="157.0" prefHeight="25.0" prefWidth="105.0" />
+      <TextField layoutX="229.0" layoutY="216.0" prefHeight="25.0" prefWidth="142.0" />
+      <TextField layoutX="229.0" layoutY="186.0" prefHeight="25.0" prefWidth="210.0" />
+      <Label layoutX="206.0" layoutY="133.0" text="Asset" />
+      <Label layoutX="229.0" layoutY="251.0" text="56.000.000.00" />
+      <SplitMenuButton layoutX="228.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="N-T">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
+      <Label layoutX="238.0" layoutY="6.0" text="Account Information" />
+   </children>
+</Pane>

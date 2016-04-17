@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="22.0" layoutY="468.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="64.0" text="Help F1" />
+      <Button layoutX="478.0" layoutY="503.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Close" />
+      <Button layoutX="478.0" layoutY="468.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Edit" />
+      <Button layoutX="322.0" layoutY="468.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="54.0" text="Print" />
+      <Button layoutX="394.0" layoutY="468.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="54.0" text="New" />
+      <Button layoutX="104.0" layoutY="468.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="54.0" text="Up" />
+      <Button layoutX="175.0" layoutY="468.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="54.0" text="Down" />
+      <Button layoutX="250.0" layoutY="468.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="54.0" text="History" />
+   </children>
+</Pane>
